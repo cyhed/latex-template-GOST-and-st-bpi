@@ -1,0 +1,52 @@
+%% Преамбула TeX-файла
+
+% 1. Стиль и язык
+\documentclass[utf8x, 12pt]{G7-32} % Стиль (по умолчанию будет 14pt)
+\usepackage{st-bpi}
+
+% преамбула документа
+\include{section/preamble}
+
+
+
+\include{main/Example/title-page/title-page st-pbi/preamble}
+
+\begin{document}
+
+\include{main/Example/title-page/title-page st-pbi/in_doc}
+
+
+
+\frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее.
+
+
+
+\thispagestyle{empty}
+\setcounter{page}{0}
+\tableofcontents
+\clearpage 
+
+\newpage ~ % для бланка задания
+
+\input{section/standart}
+
+\include{section/introduction}
+
+\mainmatter
+
+\include{section/chapter/31-chapter-one}
+
+\include{section/chapter/32-chapter-two}
+
+\backmatter %% Здесь заканчивается нумерованная часть документа и начинаются ссылки и
+            %% заключение
+
+\include{section/conclusion}
+
+\include{section/biblio/biblio}
+
+\appendix   % Тут идут приложения
+
+\include{section/chapter/61-appendix}
+
+\end{document}
