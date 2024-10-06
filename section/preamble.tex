@@ -27,6 +27,7 @@ citecolor=black, menucolor=black, filecolor=black,
 \usepackage{graphicx}   % Пакет для включения рисунков
 \DeclareGraphicsExtensions{.jpg,.pdf,.png}
 \graphicspath{{Source/img/}}    % расположение рисунков 
+\usepackage{float} % Для опции фигур [H]
 
 % С такими оно полями оно работает по-умолчанию:
 %\RequirePackage[left=20mm,right=10mm,top=20mm,bottom=20mm,headsep=0pt]{geometry}
@@ -45,3 +46,13 @@ citecolor=black, menucolor=black, filecolor=black,
 %2 это chapter, section, и subsection
 %1 это chapter и section
 %0 это chapter.
+
+
+\usepackage{subfigure} %https://latex-tutorial.com/subfigure-latex/
+%%
+%Необходима для правильности отображения ссылок на на subfigure при нумерации figure по главам
+% https://tex.stackexchange.com/questions/115712/figure-numbering-with-section-number-problem-with-subfigure
+\makeatletter 
+\renewcommand\p@subfigure{\thefigure}
+\makeatother
+%%
